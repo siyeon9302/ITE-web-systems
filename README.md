@@ -3,6 +3,5 @@ I learn base knowledge realated to WEB such as HTML, CSS, Javacript, server etc.
 - This is link of my velog, which I wrote during classes.
 > ▶️https://velog.io/@siyeon1224/posts
 <br>
-[WEEK1](https://github.com/siyeon9302/ITE-web-systems/tree/week1)
-WEEK2
-WEEK3
+<h3><a href="https://github.com/siyeon9302/ITE-web-systems/tree/week1">WEEK1</a></h3>
+
