@@ -1,13 +1,18 @@
-## 💻25.09.17 SUMMARY
+## 💻 25.09.17 SUMMARY
 
-### 📒What I learned today?
+### 📒 What I Learned Today
 
-I heard "Web safe color" for the first time.
-There are a lot of color chart in htmlcolorcodes.com
-There are Hex code, RGB code, HSL code for color. I don't know HSL ccode so I think I should find about this.
-According to professor, (I'm not sure but) RGB code and HSL code is usiing function for color so they have parameters.
+I heard the term **"Web Safe Color"** for the first time.  
+There are a lot of color charts on [htmlcolorcodes.com](https://htmlcolorcodes.com).  
+I learned that colors can be represented in **Hex code**, **RGB code**, and **HSL code**.  
+I don’t know much about the HSL code yet, so I think I should study it more.
 
-We learned about font-family. Type like this! (All of these are inline styling or inline CSS)
+According to the professor (I’m not 100% sure, but), both RGB code and HSL code are written in function form, so they use parameters.
+
+---
+
+We also learned about **font-family**.  
+Here’s an example (this is inline styling with CSS):
 
 ```html
 <h3 style="font-family: 'Courier New', Courier, monospace;">
@@ -15,26 +20,32 @@ We learned about font-family. Type like this! (All of these are inline styling o
 </h3>
 ```
 
-###### Formatting
+---
 
-I learned about formatting.
+###### ✍️ Formatting
 
-- `<b></b>`: make text bold
-- `<strong></strong>` : make text bold
-- `<i></i>` : italic font
-- `<em></em>` : same as i
-- `<mark></mark>`: highlight
-- `<del></del>`: it makes horizontal line on text
-- `<sub></sub>`: it makes text a little bit lower
-- `<super></super>`: opposite to `sub`, it makes text a little bit higher
-  For example,
+I learned about text formatting:
 
-`<h1>We love water. Have lots of H<sub>2</sub>O's everyday.</h1>`
-![alt text](image.png)
+- `<b></b>`: makes text bold
+- `<strong></strong>`: makes text bold (semantic emphasis)
+- `<i></i>`: italic font
+- `<em></em>`: italic font (semantic emphasis)
+- `<mark></mark>`: highlights text
+- `<del></del>`: draws a horizontal line through text
+- `<sub></sub>`: makes text appear a little lower
+- `<sup></sup>`: opposite of `sub`, makes text appear a little higher
 
-###### Quotations
+For example:
 
-- `<blockquote></blockquote>`: you can use this tag for quotation
+```html
+<h1>We love water. Have lots of H<sub>2</sub>O every day.</h1>
+```
+
+---
+
+###### 📜 Quotations
+
+- `<blockquote></blockquote>`: used for quotations
 
 ```html
 <blockquote cite="https://www.w3schools.com/">
@@ -43,8 +54,8 @@ I learned about formatting.
 </blockquote>
 ```
 
-- `<q></q>`: When you do quotation, you can use this one when you quite some sentences
-- `<abbr></abbr>` : makes dotted horizontal line under the text
+- `<q></q>`: used for short, inline quotations
+- `<abbr></abbr>`: shows an abbreviation with a dotted underline
 
 ```html
 <p>
@@ -52,8 +63,39 @@ I learned about formatting.
 </p>
 ```
 
-![alt text](image-1.png)
+---
 
-### 🌟My comment
+###### 🎨 What is HSL?
 
-I am always surprised at the atmosphere of class, because students are really confident about themselves and feel free to question.
+HSL stands for **Hue, Saturation, and Lightness**.  
+It is one of the ways to define colors in CSS.
+
+- **Hue (색상)**: a degree on the color wheel (0–360)
+  - 0 = Red, 120 = Green, 240 = Blue
+- **Saturation (채도)**: intensity of the color (0% = gray, 100% = full color)
+- **Lightness (명도)**: brightness of the color (0% = black, 100% = white, 50% = normal)
+
+Examples:
+
+```css
+/* Red */
+color: hsl(0, 100%, 50%);
+
+/* Pastel Blue */
+color: hsl(200, 100%, 80%);
+
+/* Gray */
+color: hsl(0, 0%, 50%);
+```
+
+👉 HSL is more intuitive for humans to adjust colors compared to RGB.
+
+---
+
+### 🌟 My Comment
+
+I am always surprised by the atmosphere of class, because students are really confident in themselves and feel free to ask questions.
+
+Also, luckily, I think my listening skills have improved! Last week, I couldn’t understand what the professor was saying, but today I could almost understand everything.
+
+I thought I already knew HTML and CSS well, but there are still so many tags I didn’t know about. I realized I should stay humble and keep learning.
