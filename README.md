@@ -6,3 +6,4 @@ I learn base knowledge realated to WEB such as HTML, CSS, Javacript, server etc.
   > ▶️[https://velog.io/@siyeon1224/posts](https://velog.io/@siyeon1224/series/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-React)
   > <br>
   <h3><a href="https://github.com/siyeon9302/ITE-web-systems/tree/week1">WEEK1</a></h3>
+  <h3><a href="https://github.com/siyeon9302/ITE-web-systems/tree/week2">WEEK2</a></h3>
