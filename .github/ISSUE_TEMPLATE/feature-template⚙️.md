@@ -1,5 +1,5 @@
 ---
-name: Feature Template
+name: Feature Template⚙️
 about: This is used for making a function.
 title: "[Feat] Login"
 labels: feature⚙️
