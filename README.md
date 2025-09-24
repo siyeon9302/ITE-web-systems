@@ -7,3 +7,4 @@ I learn base knowledge realated to WEB such as HTML, CSS, Javacript, server etc.
   > <br>
   <h3><a href="https://github.com/siyeon9302/ITE-web-systems/tree/week1">WEEK1</a></h3>
   <h3><a href="https://github.com/siyeon9302/ITE-web-systems/tree/week2">WEEK2</a></h3>
+  <h3><a href="https://github.com/siyeon9302/ITE-web-systems/tree/week3">WEEK3</a></h3>
