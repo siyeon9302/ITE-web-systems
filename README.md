@@ -92,9 +92,12 @@ Let's try
 ```
 
 If I click the link,
-![alt text](image-2.png)
+<br>
+![alt text](./image-2.png)
+<br>
 There is a new tab next to the original tab!
-![alt text](image-1.png)
+<br>
+![alt text](./image-1.png)
 
 ##### Absolute URLs vs Relative URLs
 
