@@ -93,11 +93,11 @@ Let's try
 
 If I click the link,
 <br>
-![alt text](/week3/image-2.png)
+![alt text](./image-2.png)
 <br>
 There is a new tab next to the original tab!
 <br>
-![alt text](/image-1.png)
+![alt text](./image-1.png)
 
 ##### Absolute URLs vs Relative URLs
 
@@ -119,8 +119,98 @@ There is a new tab next to the original tab!
 
 Also, we learned that we can use web developer tool in the browser!
 
+##### 09.26
+
+- HTML images
+  We can make image as link by using `<a></a>` tags!
+
+```html
+<a href="htmlpart5.html"
+  ><img id="iuGif" src="./sources/iu.gif" alt="IU gif"
+/></a>
+```
+
+> `id` stands for identify
+
+![alt text](image-3.png)
+
+If you want to change the location of image, you can use `float` attribute.
+
+```css
+#iuGif {
+  height: 20rem;
+  float: right;
+}
+```
+
+![alt text](image-4.png)
+
+> We can use `title` attribute to show where to go `<a href="https://www.salemstate.edu/" target="_blank" title="go to SSU hompage"><em>Salem State University Home Page</em></a>
+`
+
+🔹 I used `id` for CSS styling, and I was wondering what is the difference between `id` and `class`?
+Which one is better to use?
+
+- id
+
+Used to uniquely identify a single element.
+
+It must be unique within an HTML document (only one element can have that id).
+
+Selected in CSS with #idName { ... }.
+
+Best for targeting one specific element.
+
+- class
+
+Used to group multiple elements with the same style.
+
+Can be reused across many elements, and elements can have multiple classes.
+
+Selected in CSS with .className { ... }.
+
+Best for applying common styles to multiple elements.
+
+##### 👉 Which one is better?
+
+Most of the time, using class is better because it’s reusable, flexible, and easier to maintain.
+id should only be used in special cases, such as when you need to uniquely target an element (e.g., in JavaScript).
+
+- Email
+  if you want to link Email, you can use like this
+
+```html
+<p>
+  Any Questions, please
+  <a href="mailto:admissions@salemstate.edu">send email</a>
+</p>
+```
+
+- Button
+
+```html
+<button onclick="document.location='https://www.google.com'">
+  Open Google
+</button>
+```
+
+- `<a>` tag styling
+  We can make some `<a></a>` tag styling!
+
+```css
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none; /*remove underline*/
+}
+```
+
 ### 🌟My comment
 
 ##### 09.24
 
 As I learned various tags about HTML and CSS, I want to know how browser works to read and show these codes.
+
+##### 09.26
+
+I could practice more about various tags. I forgot quite many things, but through this class, I think I try to remember some knowledges. I am gonna practice more by doing portfolio projects.
