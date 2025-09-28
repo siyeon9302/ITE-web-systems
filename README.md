@@ -26,7 +26,7 @@ First, professor reviewed types of CSS tags.
 </head>
 ```
 
-![alt text](image.png)
+![alt text](./week3/image.png)
 
 - external CSS: link CSS file into html file
   I can write like this!
@@ -93,11 +93,11 @@ Let's try
 
 If I click the link,
 <br>
-![alt text](./image-2.png)
+![alt text](./week3/image-2.png)
 <br>
 There is a new tab next to the original tab!
 <br>
-![alt text](./image-1.png)
+![alt text](./week3/image-1.png)
 
 ##### Absolute URLs vs Relative URLs
 
@@ -132,7 +132,7 @@ Also, we learned that we can use web developer tool in the browser!
 
 > `id` stands for identify
 
-![alt text](image-3.png)
+![alt text](./week3/image-3.png)
 
 If you want to change the location of image, you can use `float` attribute.
 
@@ -143,7 +143,7 @@ If you want to change the location of image, you can use `float` attribute.
 }
 ```
 
-![alt text](image-4.png)
+![alt text](./week3/image-4.png)
 
 > We can use `title` attribute to show where to go `<a href="https://www.salemstate.edu/" target="_blank" title="go to SSU hompage"><em>Salem State University Home Page</em></a>
 `
