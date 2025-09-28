@@ -1,0 +1,22 @@
+/* filename: htmlpart4.css */
+/* Linking this file in htmlpart4.html */
+body {
+  background-color: rgb(136, 114, 231);
+}
+h1 {
+  color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+h2 {
+  font-family: verdana;
+}
+h3 {
+  font-family: verdana;
+}
+h5 {
+  font-size: 50%;
+}
+img {
+  height: "50";
+}
