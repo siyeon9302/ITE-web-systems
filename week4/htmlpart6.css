@@ -1,0 +1,41 @@
+/* filename: htmlpart4.css */
+/* Linking this file in htmlpart4.html */
+body {
+  background-color: rgb(136, 114, 231);
+  /* background-image: url("./sources/pingping.jpg"); */
+}
+h1 {
+  color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+h2 {
+  font-family: verdana;
+}
+h3 {
+  font-family: verdana;
+}
+h5 {
+  font-size: 50%;
+}
+#iuGif {
+  height: 20rem;
+  float: right;
+}
+#logo {
+  height: 2rem;
+}
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(101, 15, 95);
+}
+a:hover {
+  color: yellowgreen;
+}
+#imgmapTest {
+  width: 100rem;
+}
