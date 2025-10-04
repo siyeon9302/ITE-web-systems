@@ -1,0 +1,60 @@
+/* filename: htmlpart4.css */
+/* Linking this file in htmlpart4.html */
+body {
+  background-color: rgb(136, 114, 231);
+  /* background-image: url("./sources/pingping.jpg"); */
+}
+table {
+  width: 100%;
+}
+th {
+  width: 70%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  background-color: rgb(187, 134, 231);
+}
+td {
+  background-color: white;
+}
+h1 {
+  color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+h2 {
+  font-family: verdana;
+}
+h3 {
+  font-family: verdana;
+}
+h5 {
+  font-size: 50%;
+}
+#iuGif {
+  height: 20rem;
+  float: right;
+}
+#logo {
+  height: 2rem;
+}
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(101, 15, 95);
+}
+a:hover {
+  color: yellowgreen;
+}
+#imgmapTest {
+  width: 100rem;
+}
