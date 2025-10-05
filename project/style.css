@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Montserrat+Alternates:wght@400;500;700&display=swap");
 :root {
   --light-font-color: #5c4a8e;
   --dark-font-color: #d0bfff;
-  --main-font: "Bruno Ace";
-  --sub-font: "Montserrat Alternates";
+  --main-font: "Bruno Ace", sans-serif;
+  --sub-font: "Montserrat Alternates", sans-serif;
   --main-font-size: 3rem;
   --sub-font-size: 1.25rem;
   --sub-font-size2: 2rem;
@@ -12,12 +13,17 @@ html,
 body {
   background-color: rgb(255, 255, 255);
   color: var(--light-font-color);
-  height: 100vh;
+  min-height: 100vh;
   left: 0;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100vw;
   z-index: 100;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*noise effect*/
@@ -29,11 +35,11 @@ body:after {
   content: "";
   height: calc(100vh + 20rem);
   left: -10rem;
-  position: absolute;
+  position: fixed; /* ✅ absolute → fixed 로 변경 */
   top: -10rem;
   width: calc(100vw + 20rem);
   will-change: transform;
-  z-index: -1;
+  z-index: -3;
 }
 
 @-webkit-keyframes noise2 {
