@@ -4,27 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I'm Siyeon</title>
-    <link href="./menu.css" rel="stylesheet" />
+    <link href="./css/menu.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <script src="./js/script.js"></script>
     <header>
       <a href="./index.html"><img src="./source/logo.png" alt="logo icon" /></a>
-      <div>KO</div>
-      <img src="./source/nightmode.png" alt="change to dark mode button" />
-      <a href="./menu.html"
-        ><img src="./source/menuTap.png" alt="menu tap bar"
-      /></a>
+      <div class="menuArea">
+        <div class="language">KO</div>
+        <img
+          class="changemode"
+          src="./source/nightmode.png"
+          alt="change to dark mode button"
+        />
+        <a href="./menu.html"
+          ><img src="./source/menuTap.png" alt="menu tap bar"
+        /></a>
+      </div>
     </header>
     <main>
       <nav>
-        <a href="./index.html">1. Home</a>
-        <a href="./projects.html">2. Projects</a>
-        <a href="./about.html">3. About</a>
-        <a href="./contact.html">4. Contact</a>
+        <a href="./index.html">
+          <div class="first">1.</div>
+          Home</a
+        >
+        <a href="./projects.html">
+          <div>2.</div>
+          Projects</a
+        >
+        <a href="./about.html">
+          <div>3.</div>
+          About</a
+        >
+        <a href="./contact.html">
+          <div>4.</div>
+          Contact</a
+        >
       </nav>
-      <img src="./source/menuCharPurple.png" alt="purple character" />
-      <img src="./source/menuCharBlue.png" alt="blue character" />
+      <!-- character -->
+      <div class="blob left">
+        <div class="eyes">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
+        </div>
+      </div>
+
+      <div class="blob right">
+        <div class="eyes">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

@@ -1,0 +1,169 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4.81rem;
+  justify-content: space-between;
+}
+
+.language {
+  font-family: var(--main-font);
+  font-size: 1.5624rem;
+  cursor: pointer;
+}
+
+.changemode {
+  cursor: pointer;
+}
+
+.menuArea {
+  display: flex;
+  flex-direction: row;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+nav div {
+  font-size: 2.5rem;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.87rem;
+  font-family: var(--main-font);
+  font-size: var(--main-font-size);
+  color: var(--light-font-color);
+}
+
+.first {
+  padding-left: 0.6rem;
+  margin-right: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10.69rem;
+  padding-right: 10.69rem;
+  gap: 2.62rem;
+  position: relative;
+}
+
+/*character*/
+/*blue character*/
+.blob.left {
+  top: 30vh;
+  left: 70vw;
+  animation-delay: 0s;
+  position: absolute;
+  width: 21rem;
+  height: 21rem;
+  background: linear-gradient(154deg, #feffec 28.95%, #97addb 76.91%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: -1;
+}
+/*purple character*/
+.blob.right {
+  top: 45vh;
+  right: 35vw;
+  animation-delay: 3s;
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  background: linear-gradient(154deg, #feffec 28.95%, #d0bfff 76.91%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/*eyes container*/
+.eyes {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+  transform: translate(-50%, -50%);
+}
+/*eyes*/
+.eye {
+  width: 5rem;
+  height: 5rem;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.blob.left .pupil {
+  width: 3rem;
+  height: 3rem;
+  background: #7c9bd7;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transition: transform 0.1s ease;
+}
+
+.blob.right .pupil {
+  width: 3rem;
+  height: 3rem;
+  background: #b2a0e3;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transition: transform 0.1s ease;
+}
+
+/* 깜빡임 (눈꺼풀 효과) */
+.blob.left .eye::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7c9bd7;
+  border-radius: 50%;
+  transform-origin: top;
+  animation: blink 5s infinite;
+}
+
+.blob.right .eye::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #b2a0e3;
+  border-radius: 50%;
+  transform-origin: top;
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    transform: scaleY(0);
+  }
+  95% {
+    transform: scaleY(1);
+  }
+}

@@ -27,6 +27,9 @@ nav {
   gap: 11rem;
   margin-top: 5.12rem;
   font-size: var(--sub-font-size);
+}
+
+nav a {
   color: var(--light-font-color);
 }
 
@@ -34,7 +37,7 @@ nav > img {
   margin-right: 0.36rem;
 }
 
-/*캐릭터*/
+/*character*/
 /*blue character*/
 .blob.left {
   bottom: 40px;

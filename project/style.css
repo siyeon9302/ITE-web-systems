@@ -9,6 +9,10 @@
   --sub-font-size2: 2rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
   background-color: rgb(255, 255, 255);
@@ -20,10 +24,8 @@ body {
   width: 100vw;
   z-index: 100;
   scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
+  overflow-x: hidden; /* 가로 스크롤 강제 제거 */
+  overflow-y: auto; /* 세로 스크롤 유지 */
 }
 
 /*noise effect*/
