@@ -47,6 +47,7 @@ nav {
   flex-direction: column;
   padding-left: 10.69rem;
   padding-right: 10.69rem;
+  margin-top: 3rem;
   gap: 2.62rem;
   position: relative;
 }
