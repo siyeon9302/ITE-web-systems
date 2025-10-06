@@ -8,48 +8,92 @@
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <script src="./js/script.js"></script>
     <header>
       <a href="./index.html"><img src="./source/logo.png" alt="logo icon" /></a>
-      <div>KO</div>
-      <img src="./source/nightmode.png" alt="change to dark mode button" />
-      <a href="./menu.html"
-        ><img src="./source/menuTap.png" alt="menu tap bar"
-      /></a>
+      <div class="menuArea">
+        <div class="language">KO</div>
+        <img
+          class="changemode"
+          src="./source/nightmode.png"
+          alt="change to dark mode button"
+        />
+        <a href="./menu.html"
+          ><img src="./source/menuTap.png" alt="menu tap bar"
+        /></a>
+      </div>
     </header>
     <main>
-      <p>Contact</p>
-      <hr />
-      <section>
-        <div>
-          <img src="./source/arrow.png" alt="email to siyeon" />
-          mail
+      <div class="titleArea">
+        <div class="bigfont">Contact</div>
+        <hr />
+      </div>
+      <!--mail and social media area-->
+      <div class="infoArea">
+        <!--mail-->
+        <section>
+          <div class="midfont">mail</div>
+          <a class="mailLink" href="mailto:someone@example.com">
+            <div>
+              <img src="./source/arrow.png" alt="email to siyeon" />
+            </div>
+            <div>siyeon9302@naver.com</div></a
+          >
+        </section>
+        <!--social media-->
+        <section>
+          <div class="midfont">social media</div>
+          <div>
+            <div class="youtube">
+              <a href="https://www.youtube.com/@lychee1224" target="_blank">
+                <div>
+                  <img
+                    src="./source/arrow.png"
+                    alt="go to siyeon's youtube channel arrow"
+                  />
+                </div>
+                <div>youtube</div>
+              </a>
+            </div>
+            <div class="velog">
+              <a href="https://velog.io/@siyeon1224/posts" target="_blank">
+                <div>
+                  <img
+                    src="./source/arrow.png"
+                    alt="go to siyeon's velog arrow"
+                  />
+                </div>
+                <div>velog</div>
+              </a>
+            </div>
+            <div class="github">
+              <a href="https://github.com/siyeon9302" target="_blank">
+                <div>
+                  <img
+                    src="./source/arrow.png"
+                    alt="go to siyeon's github arrow"
+                  />
+                </div>
+                <div>github</div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- character -->
+      <div class="blob left">
+        <div class="eyes">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
         </div>
-        <div>siyeon9302@naver.com</div>
-      </section>
-      <section>
-        <div>social media</div>
-        <div>
-          <a href="https://www.youtube.com/@lychee1224">
-            <img
-              src="./source/arrow.png"
-              alt="go to siyeon's youtube channel arrow"
-            />
-            youtube
-          </a>
+      </div>
+
+      <div class="blob right">
+        <div class="eyes">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
         </div>
-        <div>
-          <a href="https://velog.io/@siyeon1224/posts">
-            <img src="./source/arrow.png" alt="go to siyeon's velog arrow" />
-            velog
-          </a>
-        </div>
-        <div>
-          <a href="https://github.com/siyeon9302">
-            <img src="./source/arrow.png" alt="go to siyeon's github arrow" />
-            github
-          </a>
-        </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>
