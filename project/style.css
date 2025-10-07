@@ -7,10 +7,27 @@
   --main-font-size: 3rem;
   --sub-font-size: 1.25rem;
   --sub-font-size2: 2rem;
+  --hover-color: #8e79c6;
+  --click-color: #47386e;
 }
 
 a {
   text-decoration: none;
+}
+a,
+img,
+p,
+div,
+details {
+  caret-color: transparent;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+a:active {
+  color: var(--click-color);
 }
 
 html,
