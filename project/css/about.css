@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4.81rem;
+  justify-content: space-between;
+}
+
+main {
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.language {
+  font-family: var(--main-font);
+  font-size: 1.5624rem;
+  cursor: pointer;
+}
+
+.changemode {
+  cursor: pointer;
+}
+
+.menuArea {
+  display: flex;
+  flex-direction: row;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.bigfont {
+  font-family: var(--main-font);
+  font-size: var(--main-font-size);
+  margin-bottom: 2.12rem;
+}
+
+hr {
+  border: none;
+  height: 0.125rem; /* Adjust height as needed */
+  background-color: var(--light-font-color);
+}
+
+section {
+  font-size: var(--sub-font-size);
+  font-family: var(--sub-font);
+  font-weight: 500;
+}
+
+section p {
+  margin-bottom: 1.38rem;
+}
+
+.profileimage {
+  width: 24.25rem;
+  height: 31.125rem;
+  aspect-ratio: 194/249;
+  border-radius: 0.625rem;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+  box-shadow: 0 4px 28.6px 6px rgba(0, 0, 0, 0.25);
+}
