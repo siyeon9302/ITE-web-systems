@@ -1,0 +1,120 @@
+<!-- HTML Part6 From W3schools-->
+<!DOCTYPE html>
+<html style="background-color: powderblue">
+  <head>
+    <meta charset="utf-8" />
+    <title>ITE 230 Home Page</title>
+    <link rel="icon" type="image/x-icon" href="./sources/favicon.ico"/>
+    <link rel="stylesheet" href="htmlpart6.css">
+    <!--inline style tag-->
+    <!-- <style>
+        h1{
+            color: blue;
+        }
+        body{
+            background-color: aqua;
+        }
+    </style> -->
+  </head>
+  <!--start of comments: The body of html starts below
+  end of comments-->
+  <body>
+    <h1 id="toph1">Welcome to <i>Fall 2025</i></h1>
+    <p><b>I am learning about creating a website</b></p>
+    <pre><strong>I am learning about HTML</strong></pre>
+    <h1>We love water. Have lots of H<sub>2</sub>O's everyday.</h1>
+    <hr>
+    <p>
+      <a href="https://www.salemstate.edu/" target="_blank" title="go to SSU hompage"><em>Salem State University Home Page</em></a>
+      <!--mail to -->
+      <p>Any Questions, please <a href="mailto:admissions@salemstate.edu">send email</a></p>
+      <button onclick="document.location='https://www.google.com'">Open Google</button>
+      <!--Make a picture as link-->
+      <a href="htmlpart6.html"><img id="iuGif" src="../week3/sources/iu.gif" alt="IU gif"/></a>
+      <!-- Create HTML Information Table -->
+      <table>
+        <tr> <!-- Begin Row 1 -->
+          <th>Courses</th>
+          <th>Commute</th>
+          <th id="fitness">Fitness</th>
+          <th id="meals">Meals</th>
+          <th id="event">Events</th>
+          <th class="contact">Contact</th>
+        </tr> <!-- End of row 1 -->
+        <tr> <!-- Begin Row 2 -->
+          <td>ITE 230</td>
+          <td>Yes</td>
+          <td>O'Keef Gym</td>
+          <td>North Campus Dinning</td>
+          <td>Open House on Sunday 10/5/2025</td>
+          <td>contact@salemstate.edu, 978-542-6000</td>
+        </tr> <!-- End of row 2 -->
+        <tr> <!-- Begin Row 3 -->
+          <td>ITE 230</td>
+          <td>Yes</td>
+          <td>O'Keef Gym</td>
+          <td>North Campus Dinning</td>
+          <td>Open House on Sunday 10/5/2025</td>
+          <td>contact@salemstate.edu, 978-542-6000</td>
+        </tr> <!-- End of row 3 -->
+        <tr></tr>
+      </table>
+      <!-- <h1><mark>Courses</mark></h1>
+      <h2>Commute</h2>
+      <h3>Fitness</h3>
+      <h4>Meals</h4>
+      <h5>Events</h5>
+      <h6>Contact</h6> -->
+      <address>
+        352 Lafayette St,
+        Salem, MA 01970
+      </address>
+      <!-- create ordered and unordered list-->
+      <hr>
+      <!--ordered list-->
+      <h1>Ordered List</h1>
+      <ol>
+        <li>Joe</li>
+        <li>John</li>
+        <li>Siyeon</li>
+        <li>Danh</li>
+      </ol>
+      <hr>
+      <!--unordered list-->
+      <h1>Unordered list</h1>
+      <ul>
+        <li>Joe</li>
+        <li>John</li>
+        <li>Siyeon</li>
+        <li>Danh</li>
+       </ul>
+    </p>
+    <section>
+        <p>Here is a quote from WWF's website:</p>
+        <blockquote cite="https://www.w3schools.com/">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries.
+        </blockquote>
+        <p>My goal is to: <q>Build a future where people live in harmony with nature</q></p>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+    </section>
+        <picture>
+    <source media="(min-width: 700px)" srcset="./sources/pingping.jpg">
+    <source media="(min-width: 300px)" srcset="./sources/twittee.jpg">
+    <img src="./sources/working.JPG"
+        alt="working IU">
+    </picture>
+    <img
+    id="logo"
+      src="/week2/sources/logo.png"
+      alt="Salem State University logo"
+    />
+    <hr/>
+    <!-- Creating Image Map for a Image -->
+    <img src="./sources/IMG_9265.JPG" alt="IU and Uaena" usemap="#map" id="imgmapTest">
+    <map name="map">
+        <area shape="rect" coords="1054,341,1269,900" alt="IU official youtube" href="https://www.youtube.com/@dlwlrma" target="_blank">
+        <area shape="rect" coords="216,341,588,898" alt="IU fan page" href="https://jieuninus.com/" target="_blank">
+    </map>
+    <p><a href="#top"><del>Back to Top</del></a></p>
+  </body>
+</html>
