@@ -86,3 +86,34 @@ a:hover {
 #imgmapTest {
   width: 100rem;
 }
+
+/* Style lists */
+/* Change style for unordered */
+
+.navbar {
+  width: 70%;
+  margin: auto;
+}
+ul {
+  list-style-type: circle;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e2a9a9;
+}
+nav ul li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+}
+
+li a:hover {
+  background-color: aqua;
+}

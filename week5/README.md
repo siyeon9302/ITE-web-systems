@@ -72,8 +72,33 @@ If I write like this, only the background color of the even number rows are chan
 
 ##### 10.10
 
+We learn about how to style the lists
+There are disc, circle, square, none in style type.
+`list-style-type:circle;` I can write like this
+These are for unordered lists styling
+
+- disc
+  ![alt text](image-7.png)
+- circle
+  ![alt text](image-6.png)
+- square
+  ![alt text](image-5.png)
+- none
+  ![alt text](image-8.png)
+
+These are for ordered lists styling
+
+- type="1"
+- type="A"
+- type="i"
+
+- Block level tags add space on 4sides
+- inline tags
+- <p> VS <div>
+- <span> tag
+
 ### 🌟My comment
 
-##### 10.08
+##### 10.08 ~ 10.10
 
-##### 10.10
+I learned basic things about lists. Also, we learned margin and padding, which is really important for styling.
