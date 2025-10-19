@@ -41,6 +41,7 @@ th {
 }
 td {
   background-color: white;
+  overflow: auto;
 }
 /*zebra looking effect for rows*/
 /* tr:nth-child(even) {
@@ -116,4 +117,16 @@ nav li a {
 
 li a:hover {
   background-color: aqua;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+  border: none;
+}
+
+.iframeBox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
