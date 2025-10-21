@@ -1,0 +1,36 @@
+body {
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(150, 83, 204);
+  height: 3rem; /* nav 높이 고정 (선택) */
+}
+
+/* 핵심 변경 */
+nav a {
+  display: block; /* inline → block 으로 변경 */
+  height: 100%; /* nav 전체 높이를 채우게 함 */
+  line-height: 3rem; /* 텍스트를 세로 가운데 정렬 */
+  text-decoration: none;
+  color: white;
+  padding: 0 1.5rem; /* 좌우 여백 */
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgb(111, 36, 190); /* hover 시 위아래 꽉 채워지는 효과 */
+}
+
+footer {
+  background-color: rgb(198, 198, 198);
+  height: 6rem;
+  color: white;
+  text-align: center;
+  margin-top: 10rem;
+  bottom: 0;
+}
