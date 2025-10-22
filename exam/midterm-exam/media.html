@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Media Showcase</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      header,
+      footer {
+        margin-bottom: 30px;
+      }
+
+      video {
+        display: block;
+        margin: 20px auto;
+      }
+
+      iframe {
+        margin-top: 20px;
+        border: none;
+      }
+
+      footer {
+        margin-top: 40px;
+        font-style: italic;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Media Showcase</h1>
+    </header>
+
+    <!-- Embedded image -->
+    <section>
+      <h2>Sample Image</h2>
+      <img
+        src="https://entertainimg.kbsmedia.co.kr/cms/uploads/CONTENTS_20230425095757_b457a570577d7444e7cef5c0a6e73bd7.png"
+        alt="A placeholder example image"
+        width="400"
+        title="Placeholder sample image"
+      />
+    </section>
+
+    <!-- Video file -->
+    <section>
+      <h2>Sample Video</h2>
+      <video
+        src="sample.mp4"
+        width="400"
+        controls
+        title="Sample video playback"
+      >
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Embedded external webpage or YouTube video -->
+    <section>
+      <h2>Embedded YouTube Video</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UCQHgJ4uRwo?si=v9OjjgYdAcmqTZv4"
+        title="YouTube video player"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <footer>Created by [Your Name] – HTML Practice.</footer>
+  </body>
+</html>
