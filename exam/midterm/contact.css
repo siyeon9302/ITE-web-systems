@@ -1,0 +1,25 @@
+th {
+  background-color: rgb(160, 115, 202);
+}
+
+td {
+  background-color: rgb(247, 247, 236);
+}
+
+td,
+th {
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+table,
+th,
+td {
+  border: 0.1px solid;
+  border-color: rgb(96, 75, 131);
+}
