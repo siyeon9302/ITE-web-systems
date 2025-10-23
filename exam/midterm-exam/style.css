@@ -1,0 +1,52 @@
+body {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-left: 20rem;
+  width: 100%;
+}
+
+header p {
+  color: rgb(152, 107, 188);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(150, 83, 204);
+  height: 3rem;
+  width: 100%;
+}
+
+nav a {
+  display: block;
+  height: 100%;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+  padding: 0 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgb(111, 36, 190);
+}
+
+section {
+  margin-left: 20rem;
+}
+
+figure {
+  text-align: center;
+  color: rgb(185, 129, 219);
+}
+
+footer {
+  margin-top: 5rem;
+  text-align: center;
+  background-color: rgb(225, 225, 225);
+}
