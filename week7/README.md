@@ -46,6 +46,23 @@ We can make img responsivly to the device size!
 
 ##### 10.31
 
+The `clear` property controls the flow next to floated elements.
+https://www.w3schools.com/cssref/pr_class_clear.php
+
+`scheme://prefix.domain:port/path/filename`
+
+- scheme: defines the type of Internet service (most common is http or https)
+- prefix: defines a domain prefix (default for http is www)
+- domain: defines the internet domain name
+- port: defines the port number at the host(default for http is 80)
+- path: defines a path at the server (if omitted: the root directory of the site)
+- filename: defines the name of a document or resource
+
+`localhost/phpmyadmin`
+
+`http://localhost/ite230home/htmlpart7.html`
+We made folder and tested.
+
 ### 🌟My comment
 
 ##### 10.29
@@ -53,3 +70,6 @@ We can make img responsivly to the device size!
 I was gonna study media query by myself, but we learned today! It was interesting and amazing.
 
 ##### 10.31
+
+Happy Happy Halloween!!
+We learned about how to make layouts and installed xampp.
