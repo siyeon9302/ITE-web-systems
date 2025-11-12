@@ -20,20 +20,32 @@
       </nav>
     </header>
     <!-- Contact form -->
-    <form>
+    <form action="feedback.php" method="post">
       <fieldset>
         <legend>Welcome to Contact Form</legend>
         <br />
         <!-- <h1>Welcome to Contact Form</h1> -->
         <label for="sfname">Student First Name</label>
-        <input type="text" id="sfname" name="sfname" value="Enter First Name" />
+        <input
+          type="text"
+          id="sfname"
+          name="sfname"
+          placeholder="Enter First Name"
+          required
+        />
         <br /><br />
         <label for="slname">Student Last name</label>
-        <input type="text" id="slname" name="slname" value="Enter Last Name" />
+        <input
+          type="text"
+          id="slname"
+          name="slname"
+          placeholder="Enter Last Name"
+          required
+        />
         <br /><br />
         <label for="des">Describe the Issue:</label>
-        <textarea>Write the issue you are having</textarea>
-        <input type="textarea" id="dec" name="des" />
+        <textarea required="">Write the issue you are having</textarea>
+        <input type="textarea" id="des_issue" name="des_issue" />
         <br /><br />
         <input type="submit" value="submit" />
       </fieldset>

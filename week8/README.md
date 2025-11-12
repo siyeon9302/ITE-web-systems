@@ -81,6 +81,35 @@ As I set the name as "fav-lang" now, I can only choose one option among them.
 
 ##### 11.07
 
+- PHP
+  : PHP is a server scripting language (Hypertext Preprocessor)
+
+We can start by using this format
+
+``php
+
+<!-- filename intro.php-->
+<?php // php start tag
+# echo is output
+  echo "Hello world!"
+?> <!-- end of php tag-->
+
+``
+
+We can use variable like this!
+
+``php
+
+<!-- filename intro.php-->
+<?php // php start tag
+# echo is output
+  #declare variable and init value
+  $name="Siyeon Kim";
+  echo "Hello $name!"
+?> <!-- end of php tag-->
+
+``
+
 ### 🌟My comment
 
 ##### 11.05
@@ -89,3 +118,6 @@ Actually, I thought forms part is not that important, but we use forms everywher
 I think I should practice more!
 
 ##### 11.07
+
+We learned about php! I didn't understand well, so I think I should study more.
+My friend who always seat next to me was struggle with the error, so I helped him!
