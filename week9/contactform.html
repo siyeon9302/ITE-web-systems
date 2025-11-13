@@ -1,0 +1,98 @@
+<!-- filename: contactform.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link rel="stylesheet" href="contactform.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Create a Nav bar using lists -->
+      <nav>
+        <ul>
+          <li><a href="htmlpart6.html">Home</a></li>
+          <li><a href="#course">Courses</a></li>
+          <li><a href="#students">Students</a></li>
+          <li><a href="address">Address</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Contact form -->
+    <form action="feedback.php" method="post">
+      <fieldset>
+        <legend>Welcome to Contact Form</legend>
+        <br />
+        <!-- <h1>Welcome to Contact Form</h1> -->
+        <label for="sfname">Student First Name</label>
+        <input
+          type="text"
+          id="sfname"
+          name="sfname"
+          placeholder="Enter First Name"
+          required
+        />
+        <br /><br />
+        <label for="slname">Student Last name</label>
+        <input
+          type="text"
+          id="slname"
+          name="slname"
+          placeholder="Enter Last Name"
+          required
+        />
+        <br /><br />
+        <label for="email">Student Email</label>
+        <input
+          type="email"
+          id="semail"
+          name="semail"
+          placeholder="Enter Your Email"
+          required
+        />
+        <br /><br />
+        <label for="des">Describe the Issue:</label>
+        <textarea required="">Write the issue you are having</textarea>
+        <input type="textarea" id="des_issue" name="des_issue" />
+        <br /><br />
+        <input type="submit" value="submit" />
+      </fieldset>
+      <fieldset>
+        <!--Radio buttons, name attribute must be same for All input tags-->
+        <legend>Fav Programming Langs.</legend>
+        <input type="radio" name="fav-lang" />
+        <label>Java</label>
+        <input type="radio" name="fav-lang" />
+        <label>Python</label>
+        <input type="radio" name="fav-lang" />
+        <label>html</label>
+        <input type="radio" name="fav-lang" />
+        <label>css</label>
+      </fieldset>
+      <fieldset>
+        <!--Check boxes-->
+        <legend>Fav Programming Langs.</legend>
+        <input type="checkbox" name="fav-j" />
+        <label>Java</label>
+        <input type="checkbox" name="fav-p" />
+        <label>Python</label>
+        <input type="checkbox" name="fav-h" />
+        <label>html</label>
+        <input type="checkbox" name="fav-c" />
+        <label>css</label>
+      </fieldset>
+
+      <fieldset>
+        <!-- Creating drop down boxes -->
+        <legend>Choose your Fav Lang from Dropdown List</legend>
+        <select name="fav_lang">
+          <option value="Java">Java</option>
+          <option value="HTML" selected>HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="PHP">PHP</option>
+        </select>
+      </fieldset>
+    </form>
+  </body>
+</html>
