@@ -232,6 +232,259 @@ And then, give user permission
 
 ##### 11.14
 
+We learned how to add the information into the table!
+We made the user information on phpmyadmin, and we used that information to access the database.
+But mine did not work, so I struggle with this error almost for 3 hours.
+I found it was because of the port number!
+![alt text](image-12.png)
+As I see my XAMPP Control Panel, the port number of MySQL is `3307`.
+But as I used this code,
+`pdo-getdata-studenttb.php`
+
+```php
+<?php
+$serverName="localhost"; // server name should match
+$dbname= "ite230db"; // should match with db name in phpmyadmin
+$username= "iteuser2"; // create a dedicated username for website
+$password= "(lc[gXUmQva*h3W2";
+
+
+// Create Connection to the background server
+try {
+  // Opening the connection
+$connection = new PDO("mysql:host=$serverName;dbname=$dbname", $username, $password);
+//set the PDO error mode to exception
+$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+echo "Connected Successfully to the Database from withn PHP file<br>";
+
+// write your sql query
+$sqlquery = "SELECT * FROM studenttb";
+// echo "After SQL Query<br>";
+// use connection with pdo to create prepared statement
+$statement = $connection->prepare($sqlquery);
+// echo "After Prepared<br>";
+// execute
+$statement->execute();
+//echo "After Execute<br>";
+// Fetch row of data from table as associstive array
+$arrValues = $statement->fetchAll(PDO::FETCH_ASSOC);
+echo "<br>Here is the data from student table";
+echo"<br><hr>";
+// open the table tag
+echo"<table width=\"100%\" border=\"2px\">\n";
+echo "<tr>\n";
+// add table headers
+foreach($arrValues[0] as $key => $data) {
+  echo "<th>$key</th>";
+}
+echo"</tr>";
+// display data
+foreach( $arrValues as $row) {
+  echo "<tr>";
+  foreach($row as $key => $val) {
+    echo "<td>$val</td>";
+  }
+  echo "</tr>";
+}
+//close table tag
+echo "</table>";
+echo "<br><hr>";
+}
+catch (PDOException $e) {
+  echo $e->getMessage();
+}
+// close the connection to the Database
+$connection=null;
+
+?>
+```
+
+`pdo-insert-studenttb.php`
+
+```php
+<?php
+$serverName="localhost";
+$dbname= "ite230db";
+$username= "iteuser2";
+$password= "(lc[gXUmQva*h3W2";
+
+$stufname = $_POST["sfname"];
+$stulname = $_POST["slname"];
+$issue = $_POST["des_issue"];
+$stuemail = $_POST["semail"];
+$nameFErr = "";
+$nameLErr = "";
+ //echo "You Entered STU First name is: $stufname<br>";
+ // Validate Student First name
+ if(!preg_match("/^[a-zA-Z-' ]*$/", $stufname)) {
+  $nameFErr = "Only letters and white space allowed in First Name";
+  echo "<br>First Name Error".$nameFErr."<br>";
+ }
+ // Validate Student Last name
+ if(!preg_match("/^[a-zA-Z-' ]*$/", $stulname)) {
+  $nameLErr = "Only letters and white space allowed in Last Name";
+  echo "<br>Last Name Error".$nameLErr."<br>";
+ }
+//  echo "Student Last Name is: $stulname<br>";
+//  echo "Description of the issue is $issue<br>";
+//  echo "Your email is $stuemail<br>";
+//  echo "Thank you for contacting us $stufname";
+
+// Create Connection to the background server
+
+try {
+  // Opening the connection
+$connection = new PDO("mysql:host=$serverName;dbname=$dbname", $username, $password);
+//set the PDP error mode to exception
+$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+echo "Connected Successfully to the Database from within PJP file<br>" ;
+
+// write your sql query
+$sqlquery = "INSERT INTO studenttb(stuFirstName, stuLastName, stuEmail, stuIssue) values(:s_fn,:s_ln,:s_em,:s_issu)";
+
+// echo "After SQL Query<br>";
+// use connection with pdo to create prepared statement
+$statement = $connection->prepare($sqlquery);
+// echo "After Prepared statement<br>";
+// Bind local variales to actual data post array
+$statement->bindValue(":s_fn", $stufname);
+$statement->bindValue(":s_ln", $stulname);
+$statement->bindValue(":s_issu", $issue);
+$statement->bindValue(":s_em", $stuemail);
+
+// execute
+$count = $statement->execute();
+echo "<br>After Execute";
+echo "New Records :" .$count."Successfully inserted into studenttable";
+echo"<br><hr>";
+
+echo "Table data after the insert";
+
+include 'pdo-getdata-studenttb.php';
+}
+catch (PDOException $e) {
+  echo $e->getMessage();
+}
+// close the connection to the Database
+$connection=null;
+
+?>
+```
+
+It didn't work!
+I deleted and remade user account for a lot of time, but it doesn't seem wrong.
+I was thinking what will be problem, and I just saw my MySQL port number and I asked claude whether this can be a problem.
+And it told me that was a problem!
+
+It changed my code like this.
+`pdo-getdata-studenttb.php`
+
+```php
+<?php
+$serverName = "localhost";
+$port = "3307";  // 포트 추가!
+$dbname = "ite230db";
+$username = "ite230user";
+$password = "siyeon1224";
+
+try {
+  // 포트 번호를 포함해서 연결!
+  $connection = new PDO("mysql:host=$serverName;port=$port;dbname=$dbname", $username, $password);
+  $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected Successfully to the Database from within PHP file<br>";
+
+  $sqlquery = "SELECT * FROM studenttb";
+  $statement = $connection->prepare($sqlquery);
+  $statement->execute();
+  $arrValues = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+  echo "<br>Here is the data from student table";
+  echo "<br><hr>";
+  echo "<table width=\"100%\" border=\"2px\">\n";
+  echo "<tr>\n";
+
+  foreach($arrValues[0] as $key => $data) {
+    echo "<th>$key</th>";
+  }
+  echo "</tr>";
+
+  foreach($arrValues as $row) {
+    echo "<tr>";
+    foreach($row as $key => $val) {
+      echo "<td>$val</td>";
+    }
+    echo "</tr>";
+  }
+  echo "</table>";
+  echo "<br><hr>";
+}
+catch (PDOException $e) {
+  echo $e->getMessage();
+}
+$connection = null;
+?>
+```
+
+`pdo-insert-studenttb.php`
+
+```php
+<?php
+$serverName = "localhost";
+$port = "3307";  // 포트 추가!
+$dbname = "ite230db";
+$username = "ite230user";
+$password = "siyeon1224";
+
+$stufname = $_POST["sfname"];
+$stulname = $_POST["slname"];
+$issue = $_POST["des_issue"];
+$stuemail = $_POST["semail"];
+$nameFErr = "";
+$nameLErr = "";
+
+if(!preg_match("/^[a-zA-Z-' ]*$/", $stufname)) {
+  $nameFErr = "Only letters and white space allowed in First Name";
+  echo "<br>First Name Error".$nameFErr."<br>";
+}
+
+if(!preg_match("/^[a-zA-Z-' ]*$/", $stulname)) {
+  $nameLErr = "Only letters and white space allowed in Last Name";
+  echo "<br>Last Name Error".$nameLErr."<br>";
+}
+
+try {
+  // 포트 번호를 포함해서 연결!
+  $connection = new PDO("mysql:host=$serverName;port=$port;dbname=$dbname", $username, $password);
+  $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected Successfully to the Database from within PHP file<br>";
+
+  $sqlquery = "INSERT INTO studenttb(stuFirstName, stuLastName, stuEmail, stuIssue) values(:s_fn,:s_ln,:s_em,:s_issu)";
+
+  $statement = $connection->prepare($sqlquery);
+  $statement->bindValue(":s_fn", $stufname);
+  $statement->bindValue(":s_ln", $stulname);
+  $statement->bindValue(":s_issu", $issue);
+  $statement->bindValue(":s_em", $stuemail);
+
+  $count = $statement->execute();
+  echo "<br>After Execute";
+  echo "New Records :" .$count." Successfully inserted into studenttable";
+  echo "<br><hr>";
+
+  echo "Table data after the insert";
+  include 'pdo-getdata-studenttb.php';
+}
+catch (PDOException $e) {
+  echo $e->getMessage();
+}
+$connection = null;
+?>
+```
+
+And finally, it worked!!!
+
+![alt text](image-11.png)
+
 ### 🌟My comment
 
 ##### 11.12
@@ -239,3 +492,6 @@ And then, give user permission
 I was really focused on today's class because we learned many things, especially about php and MySQL! It was my first time to make database table, so it was interesting.
 
 ##### 11.14
+
+I struggled with the error so much, but I am happy that I found what was the problem and solve it.
+I think I should study more about these field.
